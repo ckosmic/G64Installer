@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="50"
+        x:Class="G64Installer.Views.G64MessageBox" 
+		CanResize="False"
+		WindowStartupLocation="CenterScreen"
+		SizeToContent="WidthAndHeight"
+		Icon="/Assets/avalonia-logo.ico"
+		Padding="20">
+	<StackPanel HorizontalAlignment="Center">
+		<TextBlock HorizontalAlignment="Center" Name="Text"/>
+		<StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Name="Buttons">
+			<StackPanel.Styles>
+				<Style Selector="Button">
+					<Setter Property="Margin" Value="5"/>
+				</Style>
+			</StackPanel.Styles>
+		</StackPanel>
+	</StackPanel>
+</Window>

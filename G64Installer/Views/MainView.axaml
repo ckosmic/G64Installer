@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="200"
+             x:Class="G64Installer.Views.MainView">
+	<DockPanel>
+		<StackPanel Margin="10" Spacing="10" DockPanel.Dock="Top">
+			<TextBlock FontSize="30" FontWeight="ExtraBlack">G64 Installer</TextBlock>
+			<Grid ColumnDefinitions="4.5*, *" >
+				<TextBox Grid.Column="0" Text="{Binding GameDirectory}" Watermark="Garry's Mod game directory"></TextBox>
+				<Button Grid.Column="1" Command="{Binding OnBrowseClicked}" HorizontalAlignment="Right">Browse...</Button>
+			</Grid>
+			<TextBlock Text="{Binding LatestTag}"></TextBlock>
+		</StackPanel>
+		<DockPanel>
+			<StackPanel DockPanel.Dock="Left" Margin="10" Orientation="Horizontal" Spacing="10">
+				<Button VerticalAlignment="Bottom" Command="{Binding OnInstallClicked}">Install</Button>
+				<Button VerticalAlignment="Bottom" Command="{Binding OnUninstallClicked}">Uninstall</Button>
+			</StackPanel>
+			<TextBlock DockPanel.Dock="Right" Text="{Binding InstallStatus}" Margin="10" VerticalAlignment="Bottom" TextAlignment="Right"></TextBlock>
+		</DockPanel>
+	</DockPanel>
+</UserControl>
