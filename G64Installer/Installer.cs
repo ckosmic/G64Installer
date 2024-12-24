@@ -84,7 +84,7 @@ namespace G64Installer
 
         internal static bool IsValidInstallFolder(string path)
         {
-            return File.Exists(Path.Combine(path, "hl2.exe"));
+            return File.Exists(Path.Combine(path, "hl2.exe")) || File.Exists(Path.Combine(path, "gmod.exe"));
         }
 
         internal static async Task<int> InstallG64(MainWindowViewModel vm)
